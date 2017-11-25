@@ -1,0 +1,41 @@
+create table user
+(
+name varchar(10),
+email varchar(30) primary key,
+age int not null,
+qualificaton varchar(15),
+password varchar(15),
+level int
+);
+
+create table questions
+(
+level int,
+question varchar(150),
+choice1 varchar(20),
+choice2 varchar(20),
+choice3 varchar(20),
+choice4 varchar(20),
+c_opt int
+);
+
+create table administrators
+(
+uname varchar(15) primary key,
+pword varchar(15)
+);
+
+insert into questions values(1,'What color is the M in McDonalds?','Red','Yellow','Blue','Green',2);
+insert into questions values(1,'Which is the least populated country in the world?','Vatican City','San Deigo','San Francisco','India',1);
+insert into questions values(1,'Which is the longest river on the earth?','Ganga','Nile','Sindhu','amazon',2);
+insert into questions values(1,'United Nations Organizations Headquarters at','Yate','Paris','New York, USA','Washington DC',3);
+insert into questions values(1,'which metal is in liquid form at room tempt?','Iron','Aluminium','Mercury','Gold',3);
+insert into questions values(1,'Which is the country which has the Great Barrier Reef? ','London','Ireland','New Zeland','Australia',4);
+
+insert into questions values(1,'Which crop is sown on the largest area in India?','Rice','Wheat','Sugarcane','Maize',1);
+insert into questions values(2,'The value of Gold is determined in  ',' Rome',' Washington',' Teheran','London',4);
+insert into questions values(2,'Kalahari Desert is in  ',' India',' Chile',' South Africa','Saudi Arabia',3);
+insert into questions values(2,'The system of dual citizenship exists in ',' USA','France',' UK','Germany',1);
+insert into questions values(2,' The longest mountain range in the world is ','The Alps','The Himalayas','The Andes','The Rockies',3);
+
+insert into administrators values('Rahul','725264');
