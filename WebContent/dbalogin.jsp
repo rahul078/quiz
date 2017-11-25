@@ -7,38 +7,33 @@
 
 <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="stylesheet/styling.css">
-<link rel="stylesheet" href="stylesheet/animaton.css">
+
+
 <title>DBA Login</title>
 <style>
-
+h3{
+	color:red;
+}
 .btn {
   background: #2bed05;
-  background-image: -webkit-linear-gradient(top, #2bed05, #f5da27);
-  background-image: -moz-linear-gradient(top, #2bed05, #f5da27);
-  background-image: -ms-linear-gradient(top, #2bed05, #f5da27);
-  background-image: -o-linear-gradient(top, #2bed05, #f5da27);
-  background-image: linear-gradient(to bottom, #2bed05, #f5da27);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
+
+  background-image: linear-gradient(to bottom, #3cfcec, #122cb3);
   border-radius: 28px;
   font-family: Georgia;
   color: white;
   font-size: 20px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 20px 5px 20px;
   text-decoration: none;
 }
 
 .btn:hover {
   background: #3cfcec;
-  background-image: -webkit-linear-gradient(top, #3cfcec, #122cb3);
-  background-image: -moz-linear-gradient(top, #3cfcec, #122cb3);
-  background-image: -ms-linear-gradient(top, #3cfcec, #122cb3);
-  background-image: -o-linear-gradient(top, #3cfcec, #122cb3);
-  background-image: linear-gradient(to bottom, #3cfcec, #122cb3);
+  color:white;
+  background-image: linear-gradient(to bottom, #2bed05, #f5da27);
   text-decoration: none;
 }
 .css-input {
@@ -58,29 +53,26 @@
 }
 #navigation
 {
-	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
-  height: 100px;
-}
-h3{
-	color:red;
-}
-#navigation
-{
-	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
-  height: 100px;
+background-image: linear-gradient(to left, #B3FAFF 0%, #FFFFFF 100%);
+  height: 90px;
 }
 nav li{
   font-size:2.5rem;
-  width:150px;
-  top:30px;
+	padding:18px 10px 20px 10px;
+
   font-family: 'Rye', cursive;
 }
 nav li:hover{
   font-size:3rem;
   font-family: 'Rye', cursive;
-  border-bottom:3px solid green;
-  top:35px;
-  right:20px;
+  background-color:lightgray;
+  border-bottom:3px solid orange;
+}
+table tr td
+{
+padding-left:10px;
+padding-top:10px;
+ font-family: 'Roboto Slab', serif;
 }
 </style>
 </head>
@@ -99,18 +91,18 @@ nav li:hover{
 		<table>
 			<tr>
 				<td>UserName</td>
-				<td><input type="text" name ="uname" size=30 required class="css-input" /></td>
+				<td><input type="text" name ="uname" size=30 class="css-input"  required/></td>
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td><input type="password" name="pword" required  class="css-input" /></td>
+				<td><input type="password" name="pword" class="css-input" required/></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="submit" class="btn" /></td>
 				<td><input type="reset" value="reset" class="btn"/></td>
 			</tr>
 		</table>
-	
+
 	</form>
 </body>
 </html>

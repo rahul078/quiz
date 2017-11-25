@@ -41,7 +41,7 @@ public class resultController extends HttpServlet {
 			float result=0;
 			for(Questions qi:q)
 			{
-				System.out.println(qi.getQuestion());
+				//System.out.println(qi.getQuestion());
 				try{
 				if(request.getParameter(qi.getQuestion()).equals(Integer.toString(qi.getC_opt())))
 				{

@@ -74,10 +74,10 @@ public class DbImpl implements DbInterface {
 
 		
 		PreparedStatement p=con.prepareStatement("select * from questions where level=?");
-		System.out.println("got prepared statement   "+level);
+		//System.out.println("got prepared statement   "+level);
 		p.setInt(1, level);
 		ResultSet r=p.executeQuery();
-		System.out.println("Got Result Set");
+		//System.out.println("Got Result Set");
 		int i=0;
 		
 		List<Questions> qlist=new ArrayList<>();

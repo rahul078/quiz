@@ -99,7 +99,7 @@ public class registerController extends HttpServlet {
 		}
 		else if(!pword.equals(cpword))
 		{
-			error.put("password", "password and confirm password must be same");
+			error.put("pword", "password and confirm password must be same");
 		}
 		User r=new User();
 		if(error.isEmpty())

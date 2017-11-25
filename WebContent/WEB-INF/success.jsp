@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="stylesheet/styling.css">
-<link rel="stylesheet" href="stylesheet/animaton.css">
+
 <title>Welcome ${sessionScope.User.name }</title>
 </head>
 <style>
@@ -25,28 +24,21 @@ a:hover{
 }
 #navigation
 {
-	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
-  height: 100px;
+background-image: linear-gradient(to left, #B3FAFF 0%, #FFFFFF 100%);
+  height: 90px;
 }
 nav li{
   font-size:2.5rem;
-  width:150px;
-  top:30px;
+	padding:18px 10px 20px 10px;
+
   font-family: 'Rye', cursive;
 }
 nav li:hover{
   font-size:3rem;
   font-family: 'Rye', cursive;
-  border-bottom:3px solid green;
-  top:35px;
-  right:20px;
+  background-color:lightgray;
+  border-bottom:3px solid orange;
 }
-nav ul li a
-{
-  font-size: 2.5rem;
-  font-family: 'Rye', cursive;
-}
-
 </style>
 <body>
 
