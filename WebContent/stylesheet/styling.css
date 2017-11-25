@@ -1,0 +1,61 @@
+@CHARSET "ISO-8859-1";
+
+
+body {
+ font-family:Tahoma,Arial,sans-serif; 
+}
+
+table tr td p
+{
+  font-size:1.6rem;
+  color:red;
+}
+
+ 
+nav li{
+  font-size:2.5rem;
+  width:150px;
+  font-family: 'Acme', sans-serif;
+  font-family: 'Rye', cursive;
+}
+
+nav li a:hover{
+  font-size:3rem;
+  font-family: 'Rye', cursive;
+}
+nav ul li a
+{
+  font-size: 2.5rem;
+  font-family: 'Rye', cursive;
+}
+
+
+
+#login_form
+{
+  padding-left: 30px;
+}
+
+table tr td
+{
+  padding:5px;
+  color:black ;
+}
+
+h2
+{
+	color:red;
+}
+#footer{
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height:75px;
+  background-color: lightgray;
+}
+nav
+{
+	background-image:url('images/background.png');
+	background-repeat:repeat-x;
+}
+
