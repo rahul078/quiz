@@ -10,23 +10,64 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stylesheet/styling.css">
+<link rel="stylesheet" href="stylesheet/animaton.css">
 <title>Welcome ${sessionScope.User.name }</title>
 </head>
+<style>
+body {
+ font-family:Tahoma,Arial,sans-serif;
+}
+a{
+  color:black;
+}
+a:hover{
+  color:blue;
+}
+#navigation
+{
+	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
+  height: 100px;
+}
+nav li{
+  font-size:2.5rem;
+  width:150px;
+  top:30px;
+  font-family: 'Rye', cursive;
+}
+nav li:hover{
+  font-size:3rem;
+  font-family: 'Rye', cursive;
+  border-bottom:3px solid green;
+  top:35px;
+  right:20px;
+}
+nav ul li a
+{
+  font-size: 2.5rem;
+  font-family: 'Rye', cursive;
+}
+
+</style>
 <body>
 
-<nav class="navbar navbar-default" background-image=url("images/img-background.png")>
+<nav class="navbar navbar-default" id="navigation">
 	<img src="images/logo.png" width=250px height=100px/>
 	<ul class="nav navbar-nav navbar-right">
-	<li><a href="examController">Take Quiz</a></li>
+	<li><a href="examController">Quiz</a></li>
 	<li><a href="logoutController">Logout</a></li>
 	</ul>
 </nav>
 
 <h3>Welcome ${sessionScope.User.name }</h3>
 <br>
+<h5>
+${message }
+</h5>
+<br>
 <h4>You are at level ${sessionScope.User.level}</h4>
 
-<h4>${msg }</h4>
+<h4 id="anim" class="animated lightSpeedIn">${msg }</h4>
+<br>
 
 </body>
 </html>

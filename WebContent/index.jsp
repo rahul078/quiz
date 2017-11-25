@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="stylesheet/animaton.css">
 <title>Welcome</title>
 
 <style>
@@ -24,27 +25,7 @@ a{
 a:hover{
   color:blue;
 }
-nav
-{
-	background-color:#3de109;
-  height: 100px;
-}
-nav li{
-  font-size:2.5rem;
-  width:150px;
-  font-family: 'Rye', cursive;
-}
-nav li a:hover{
-  font-size:3rem;
-  font-family: 'Rye', cursive;
-  border-bottom:3px dashed black;
-  background-color:#4BD005;
-}
-nav ul li a
-{
-  font-size: 2.5rem;
-  font-family: 'Rye', cursive;
-}
+
 #footer{
   position: absolute;
   bottom:0;
@@ -66,11 +47,29 @@ b{
   font-family: 'Roboto Slab', serif;
   font-size:15px;
 }
+#navigation
+{
+	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
+  height: 100px;
+}
+nav li{
+  font-size:2.5rem;
+  width:150px;
+  top:30px;
+  font-family: 'Rye', cursive;
+}
+nav li:hover{
+  font-size:3rem;
+  font-family: 'Rye', cursive;
+  border-bottom:3px solid green;
+  top:35px;
+  right:20px;
+}
 </style>
 
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="navigation">
 	<img src="images/logo.png" width=250px height=100px/>
 	<ul class="nav navbar-nav navbar-right">
 	<li><a href="login.jsp">Login</a></li>
@@ -83,7 +82,7 @@ b{
 	<br/>
 
 	</p>
-	<h3>${fail }</h3>
+	<h3 id="anim" class="animated lightSpeedIn">${fail }</h3>
 	<div id="footer">
 	<p font-size:10px>Contact us on : <b>rahul.jaikumar1998@gmail.com</b>
 	<br>

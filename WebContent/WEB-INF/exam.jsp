@@ -13,60 +13,65 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-nav
+
+#navigation
 {
-	background-color:#3de109;
+	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
   height: 100px;
 }
 nav li{
   font-size:2.5rem;
   width:150px;
+  top:30px;
   font-family: 'Rye', cursive;
+}
+nav li:hover{
+  font-size:3rem;
+  font-family: 'Rye', cursive;
+  border-bottom:3px solid green;
+  top:35px;
+  right:20px;
 }
 table tr td
 {
   padding:3px;
   color:black ;
 }
-nav li a:hover{
-  font-size:3rem;
-  font-family: 'Rye', cursive;
-    border-bottom:3px dashed black;
-}
-nav ul li a
-{
-  font-size: 2.5rem;
-  font-family: 'Rye', cursive;
-}
 .btn {
-  background: #0b1dde;
-  background-image: -webkit-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: -moz-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: -ms-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: -o-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: linear-gradient(to bottom, #0b1dde, #0a3306);
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
+  background: #2bed05;
+  background-image: -webkit-linear-gradient(top, #2bed05, #f5da27);
+  background-image: -moz-linear-gradient(top, #2bed05, #f5da27);
+  background-image: -ms-linear-gradient(top, #2bed05, #f5da27);
+  background-image: -o-linear-gradient(top, #2bed05, #f5da27);
+  background-image: linear-gradient(to bottom, #2bed05, #f5da27);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
   font-family: Georgia;
-  color: #fae6fa;
+  color: white;
   font-size: 20px;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
 }
+
 .btn:hover {
-  background: #18c0de;
-  background-image: -webkit-linear-gradient(top, #18c0de, #a124e0);
-  background-image: -moz-linear-gradient(top, #18c0de, #a124e0);
-  background-image: -ms-linear-gradient(top, #18c0de, #a124e0);
-  background-image: -o-linear-gradient(top, #18c0de, #a124e0);
-  background-image: linear-gradient(to bottom, #18c0de, #a124e0);
+  background: #3cfcec;
+  background-image: -webkit-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: -moz-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: -ms-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: -o-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: linear-gradient(to bottom, #3cfcec, #122cb3);
   text-decoration: none;
+}
+#navigation
+{
+	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
+  height: 100px;
 }
 </style>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="navigation">
 	<img src="images/logo.png" width=250px height=100px/>
 	<ul class="nav navbar-nav navbar-right">
 	<li><a href="resultController">Cancel</a></li>
@@ -80,17 +85,18 @@ nav ul li a
 		s.setAttribute("question",q);
 	%>
 	<c:forEach items="${q}" var="question">
+		<br>
 	<p>${question.question}</p>
-	<br>
-	<input type="radio" value="1" name="${question.question}"  required>${question.choice1 }</input><br/>
-	<input type="radio" value="2" name="${question.question}">${question.choice2 }</input><br/>
-	<input type="radio" value="3" name="${question.question}">${question.choice3 }</input><br/>
-	<input type="radio" value="4" name="${question.question}">${question.choice4 }</input><br/>
+
+	<input type="radio" value="1" name="${question.question}" required>${question.choice1 }</input><br/>
+	<input type="radio" value="2" name="${question.question}" >${question.choice2 }</input><br/>
+	<input type="radio" value="3" name="${question.question}" >${question.choice3 }</input><br/>
+	<input type="radio" value="4" name="${question.question}" >${question.choice4 }</input><br/>
 	
 	
 	</c:forEach>
 	<br>
-	<br>
+
 	<input type="submit" value="submit" class="btn"/>
 	
 </form>

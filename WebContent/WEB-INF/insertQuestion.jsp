@@ -10,69 +10,108 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stylesheet/styling.css">
+<link rel="stylesheet" href="stylesheet/animaton.css">
 
 
 <title>DBA PAGE</title>
 <style type="text/css">
+#navigation
+{
+	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
+  height: 100px;
+}
+nav li{
+  font-size:2.5rem;
+  width:150px;
+  top:30px;
+  font-family: 'Rye', cursive;
+}
+nav li:hover{
+  font-size:3rem;
+  font-family: 'Rye', cursive;
+  border-bottom:3px solid green;
+  top:35px;
+  right:20px;
+}
 .btn {
-  background: #0b1dde;
-  background-image: -webkit-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: -moz-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: -ms-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: -o-linear-gradient(top, #0b1dde, #0a3306);
-  background-image: linear-gradient(to bottom, #0b1dde, #0a3306);
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
+  background: #2bed05;
+  background-image: -webkit-linear-gradient(top, #2bed05, #f5da27);
+  background-image: -moz-linear-gradient(top, #2bed05, #f5da27);
+  background-image: -ms-linear-gradient(top, #2bed05, #f5da27);
+  background-image: -o-linear-gradient(top, #2bed05, #f5da27);
+  background-image: linear-gradient(to bottom, #2bed05, #f5da27);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
   font-family: Georgia;
-  color: #fae6fa;
+  color: white;
   font-size: 20px;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
 }
+.css-input {
+     padding: 5px;
+     font-size: 16px;
+     border-width: 1px;
+     border-color: #CCCCCC;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: solid;
+     border-radius: 9px;
+     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+     text-shadow: undefined 0px 0px 5px px rgba(66,66,66,.75);
+}
+ .css-input:focus {
+     outline:none;
+}
 .btn:hover {
-  background: #18c0de;
-  background-image: -webkit-linear-gradient(top, #18c0de, #a124e0);
-  background-image: -moz-linear-gradient(top, #18c0de, #a124e0);
-  background-image: -ms-linear-gradient(top, #18c0de, #a124e0);
-  background-image: -o-linear-gradient(top, #18c0de, #a124e0);
-  background-image: linear-gradient(to bottom, #18c0de, #a124e0);
+  background: #3cfcec;
+  background-image: -webkit-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: -moz-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: -ms-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: -o-linear-gradient(top, #3cfcec, #122cb3);
+  background-image: linear-gradient(to bottom, #3cfcec, #122cb3);
   text-decoration: none;
+}
+#navigation
+{
+	background: linear-gradient(to right, #66ff33 0%, #0099ff 100%);
+  height: 100px;
 }
 </style>
 
 </head>
 <body>
 
-<nav class="navbar navbar-default" background-image=url("images/img-background.png")>
+<nav class="navbar navbar-default" id="navigation">
 	<img src="images/logo.png" width=250px height=100px/>
 	<ul class="nav navbar-nav navbar-right">
 	<li><a href="dbaLogoutController">Logout</a></li>
 	</ul>
 </nav>
-	${msg }
+	<h2 id="anim" class="animated lightSpeedIn">${msg }</h2>
 	<div id="insert">
 	<form action="insertQuestion" method="post">
 		<table>
 			<tr>
 				<td>Enter Question</td>
-				<td><input type="text" name="question"/></td>
+				<td><input type="text" name="question" class="css-input" /></td>
 			</tr>
 			<tr>
 				<td>Enter choice 1</td>
-				<td><input type="text" name="choice1" /></td>
+				<td><input type="text" name="choice1" class="css-input"  /></td>
 			</tr>
 			<tr>
 				<td>Enter choice 2</td>
-				<td><input type="text" name="choice2" /></td>
+				<td><input type="text" name="choice2" class="css-input"  /></td>
 			</tr>
 			<tr>
 				<td>Enter choice 3</td>
-				<td><input type="text" name="choice3" /></td>
+				<td><input type="text" name="choice3" class="css-input"  /></td>
 			</tr>
 			<tr>
 				<td>Enter choice 4</td>
-				<td><input type="text" name="choice4" /></td>
+				<td><input type="text" name="choice4"  class="css-input" /></td>
 			</tr>
 			<tr>
 				<td>Enter correct option number</td>
