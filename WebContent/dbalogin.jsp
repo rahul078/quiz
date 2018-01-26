@@ -74,6 +74,37 @@ padding-left:10px;
 padding-top:10px;
  font-family: 'Roboto Slab', serif;
 }
+form{
+  display: inline-block;
+  text-align: center;
+}
+
+fieldset {
+  margin: 20px;
+  padding: 0 10px 10px;
+  border: 1px solid #666;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #666;
+  padding-top: 10px;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.button
+{
+  background-color: #BA68C8;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -85,24 +116,34 @@ padding-top:10px;
 	<li><a href="register.jsp">Register</a></li>
 	</ul>
 </nav>
-<h2 id="anim" class="animated lightSpeedIn">${fail }</h2>
+<h2>${fail }</h2>
 <br>
-	<form action="dbalogin" method="post">
-		<table>
-			<tr>
-				<td>UserName</td>
-				<td><input type="text" name ="uname" size=30 class="css-input"  required/></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="pword" class="css-input" required/></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="submit" class="btn" /></td>
-				<td><input type="reset" value="reset" class="btn"/></td>
-			</tr>
-		</table>
+	<div align="center">
+  <form action="dbalogin" action="post">
+    <fieldset>
+<h2><center>Admin Login</center></h2>
+    <div class="imgcontainer">
+    <img src="images/restricted.png" alt="Image not found" width="200" height="200" align="center">
+    </div>
 
-	</form>
+    <table>
+      <tr><center>
+        <td> Username </td>
+      <td><input type=text name="uname" size=25% required class="css-input" /></td>
+      </center></tr>
+
+  <tr>
+   <td>Password</td>
+   <td><input type=password name="pword" size=25% required class="css-input" /></td>
+  </tr>
+  <tr>
+    <td><input type="submit" value="submit" class="btn"/></td>
+  	<td><input type="reset" value="Reset" class="btn" /></td>
+  </tr>
+  </table>
+
+</fieldset>
+  </form>
+  </div>
 </body>
 </html>

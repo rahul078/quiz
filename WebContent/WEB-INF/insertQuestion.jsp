@@ -18,6 +18,7 @@ table tr td
   color:black;
   font-family: 'Roboto Slab', serif;
   padding:5px;
+  padding-left:20px;
 }
 .btn {
   background: #2bed05;

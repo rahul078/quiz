@@ -9,9 +9,13 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>quiz</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="stylesheet/styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheet/styling.css">
 
 <style>
 table tr td
@@ -30,7 +34,10 @@ table tr td
   padding: 5px 20px 5px 20px;
   text-decoration: none;
 }
-
+#choice
+{
+	padding-left:200px;
+}
 .btn:hover {
   background: #3cfcec;
   color:white;
@@ -41,6 +48,8 @@ table tr td
 {
 background-image: linear-gradient(to left, #B3FAFF 0%, #FFFFFF 100%);
   height: 90px;
+  position: -webkit-sticky;
+  position: sticky;
 }
 nav li{
   font-size:2.5rem;
@@ -54,9 +63,26 @@ nav li:hover{
   background-color:lightgray;
   border-bottom:3px solid orange;
 }
+#question-border
+{
+align:center;
+	width:750px;
+	border:1px solid black;
+	border-radius:20px;
+
+	box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+ 
+}
+
 </style>
 </head>
 <body>
+<div class="sticky">
 <nav class="navbar navbar-default" id="navigation">
 	<img src="images/logo.png" width=250px height=100px/>
 	<ul class="nav navbar-nav navbar-right">
@@ -64,6 +90,7 @@ nav li:hover{
 	<li><a href="logoutController">Logout</a></li>
 	</ul>
 </nav>
+</div>
 <form action="resultController" method="post">
 
 	<% List q=(ArrayList)request.getAttribute("q");
@@ -72,19 +99,25 @@ nav li:hover{
 	%>
 	<c:forEach items="${q}" var="question">
 		<br>
-	<p>${question.question}</p>
-
+		<center>
+	<div id="question-border">
+	
+	<h3>${question.question}</h3>
+	<div id="choice" align="left">
 	<input type="radio" value="1" name="${question.question}" required>${question.choice1 }</input><br/>
 	<input type="radio" value="2" name="${question.question}" >${question.choice2 }</input><br/>
 	<input type="radio" value="3" name="${question.question}" >${question.choice3 }</input><br/>
 	<input type="radio" value="4" name="${question.question}" >${question.choice4 }</input><br/>
-
-
+	
+	</div>
+	
+	</div>
+	</center>
 	</c:forEach>
 	<br>
-
+	<div id="button-rel" align="center">
 	<input type="submit" value="submit" class="btn"/>
-
+	</div>
 </form>
 </body>
 </html>

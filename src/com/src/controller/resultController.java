@@ -53,12 +53,13 @@ public class resultController extends HttpServlet {
 					
 				}
 			}
+			HttpSession session=request.getSession();
 			result=correct/no;
 			request.setAttribute("message","You have answered "+correct+" questions correctly out of "+no+" questions");
 			if(result>0.5)
 			{
 				DbInterface f=RegistrationFactory.getInstance();
-				HttpSession session=request.getSession();
+				
 				User u= (User)session.getAttribute("User");
 				//System.out.println("Got session user= "+u.getName() +" level= "+u.getLevel());
 				u.setLevel(u.getLevel()+1);
